@@ -176,6 +176,87 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blog.calria.plus/2021/01/18/URG%E6%BF%80%E5%85%89%E9%9B%B7%E8%BE%BE%E7%9A%84%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="亓淇">
+      <meta itemprop="description" content="小小眼睛充满大大迷惑">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="亓淇小站">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/18/URG%E6%BF%80%E5%85%89%E9%9B%B7%E8%BE%BE%E7%9A%84%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">URG激光雷达的使用</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-01-18 20:24:03 / Modified: 21:04:31" itemprop="dateCreated datePublished" datetime="2021-01-18T20:24:03+08:00">2021-01-18</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%BC%A0%E6%84%9F%E5%99%A8/" itemprop="url" rel="index"><span itemprop="name">传感器</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%BC%A0%E6%84%9F%E5%99%A8/LiDAR/" itemprop="url" rel="index"><span itemprop="name">LiDAR</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>本文详解了URG激光雷达的使用</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/01/18/URG%E6%BF%80%E5%85%89%E9%9B%B7%E8%BE%BE%E7%9A%84%E4%BD%BF%E7%94%A8/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+	
+	
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://blog.calria.plus/2021/01/17/VINS-Mono%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E7%9B%B8%E6%9C%BA%E6%A0%87%E5%AE%9A%E5%8E%9F%E7%90%86%E5%8F%8Acamera-models%E6%A8%A1%E5%9D%97%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -199,10 +280,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-01-17 11:33:22 / Modified: 11:48:31" itemprop="dateCreated datePublished" datetime="2021-01-17T11:33:22+08:00">2021-01-17</time>
+              <time title="Created: 2021-01-17 11:33:22" itemprop="dateCreated datePublished" datetime="2021-01-17T11:33:22+08:00">2021-01-17</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-18 21:04:46" itemprop="dateModified" datetime="2021-01-18T21:04:46+08:00">2021-01-18</time>
+              </span>
 
           
 
@@ -215,14 +302,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="1-鱼眼相机"><a href="#1-鱼眼相机" class="headerlink" title="1. 鱼眼相机"></a>1. 鱼眼相机</h2><h3 id="1-1-理论"><a href="#1-1-理论" class="headerlink" title="1.1 理论"></a>1.1 理论</h3><h3 id="1-2-代码解读"><a href="#1-2-代码解读" class="headerlink" title="1.2 代码解读"></a>1.2 代码解读</h3><p>VINS中鱼眼相机的标定由以下几个核心函数组成</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CataCamera::estimateIntrinsics</span><span class="params">(<span class="keyword">const</span> cv::Size&amp; boardSize,</span></span></span><br><span class="line"><span class="function"><span class="params">                               <span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">vector</span>&lt; <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;cv::Point3f&gt; &gt;&amp; objectPoints,</span></span></span><br><span class="line"><span class="function"><span class="params">                               <span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">vector</span>&lt; <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;cv::Point2f&gt; &gt;&amp; imagePoints)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CataCamera::liftSphere</span><span class="params">(<span class="keyword">const</span> Eigen::Vector2d&amp; p, Eigen::Vector3d&amp; P)</span> <span class="keyword">const</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CataCamera::distortion</span><span class="params">(<span class="keyword">const</span> Eigen::Vector2d&amp; p_u, Eigen::Vector2d&amp; d_u)</span> <span class="keyword">const</span></span>;</span><br></pre></td></tr></table></figure>
-
-
-
-
-<p>内参估计源码框架：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">estimateIntrinsics</span>(<span class="params">boardSize: Point2d, objectPoints: List[List[Point3f]], imagePoints: List[List[Point2f]]</span>) -&gt; void:</span> <span class="comment"># CataCamera.cc</span></span><br><span class="line">    <span class="comment"># asset(len(objectPoints) == len(imagePoints) == 1727)</span></span><br><span class="line">    xi, k1, k2, p1, p2, u0, v0 = <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, imageWidth / <span class="number">2.0</span>, imageHeight() / <span class="number">2.0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Initialize gamma (focal length)</span></span><br><span class="line">    <span class="comment"># Use non-radial line image and xi = 1</span></span><br><span class="line">    <span class="keyword">for</span> eachImage <span class="keyword">in</span> imagePoints:</span><br><span class="line">        <span class="keyword">for</span> eachRow <span class="keyword">in</span> eachImage:</span><br><span class="line">            <span class="keyword">for</span> idx, (x, y) <span class="keyword">in</span> <span class="built_in">enumerate</span>(eachRow):</span><br><span class="line">                P[idx, :] = [x - u0, y - v0, <span class="number">0.5</span>, -<span class="number">0.5</span> * (square(x - u0) + square(y - v0))] <span class="comment"># P.shape = (image.width, 4)</span></span><br><span class="line">            cv2.svd.solveZ(P, C) <span class="comment"># C.shape = (4, 1)</span></span><br><span class="line">            t = square(C[<span class="number">0</span>]) + square(C[<span class="number">1</span>]) + C[<span class="number">2</span>] * C[<span class="number">3</span>]</span><br><span class="line">            gamma = sqrt(C[<span class="number">2</span>] / C[<span class="number">3</span>])</span><br><span class="line">            rvecs, tvecs = estimateExtrinsics(objetcPoints, imagePoints, gamma)</span><br><span class="line">            reprojErr = reprojectionError(objetcPoints, imagePoints, rvecs, tvecs, gamma)</span><br><span class="line">            <span class="keyword">if</span> reprojErr &lt; minReprojErr:</span><br><span class="line">                minReprojErr = reprojErr</span><br><span class="line">                gamma0 = gamma</span><br><span class="line">    <span class="keyword">if</span> gamm0 &lt;= <span class="number">0.0</span> <span class="keyword">and</span> minReprojErr &gt; <span class="built_in">float</span>(<span class="string">&#x27;inf&#x27;</span>):</span><br><span class="line">        <span class="keyword">raise</span> RuntimeError</span><br><span class="line">    <span class="keyword">return</span> gamma0</span><br></pre></td></tr></table></figure>
+          <p>Hi</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/01/17/VINS-Mono%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E7%9B%B8%E6%9C%BA%E6%A0%87%E5%AE%9A%E5%8E%9F%E7%90%86%E5%8F%8Acamera-models%E6%A8%A1%E5%9D%97%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1796,20 +1884,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-count">20</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-count">19</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
