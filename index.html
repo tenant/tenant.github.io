@@ -176,6 +176,142 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blog.calria.plus/2021/05/25/Python%E7%8E%AF%E5%A2%83%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E5%AF%B9%E6%AF%94/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="亓淇">
+      <meta itemprop="description" content="小小眼睛充满大大迷惑">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="亓淇小站">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/25/Python%E7%8E%AF%E5%A2%83%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E5%AF%B9%E6%AF%94/" class="post-title-link" itemprop="url">Python环境管理工具对比</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-05-25 17:11:14" itemprop="dateCreated datePublished" datetime="2021-05-25T17:11:14+08:00">2021-05-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-05-26 22:00:45" itemprop="dateModified" datetime="2021-05-26T22:00:45+08:00">2021-05-26</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="Anaconda"><a href="#Anaconda" class="headerlink" title="Anaconda"></a>Anaconda</h2><p>相比而言，Anaconda的优点在于可以在环境配置过程中自定义Python版本并完成自动化安装。</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget </span><br><span class="line">chmod +X A</span><br><span class="line">./A</span><br></pre></td></tr></table></figure>
+<p>安装过程中选择默认选项即可。</p>
+<h3 id="创建环境"><a href="#创建环境" class="headerlink" title="创建环境"></a>创建环境</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create --name spconv-1.0 python=3.6 pytorch=1.1 cudatoolkit=9.2 cudatoolkit-dev=9.2 cmake --channel pytorch --channel=conda-forge</span><br></pre></td></tr></table></figure>
+<h3 id="常用安装脚本"><a href="#常用安装脚本" class="headerlink" title="常用安装脚本"></a>常用安装脚本</h3><h4 id="spconv"><a href="#spconv" class="headerlink" title="spconv"></a>spconv</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">conda create --name spconv-1.0 python=3.6 pytorch=1.1 cudatoolkit=9.2 cudatoolkit-dev=9.2 cmake --channel pytorch --channel=conda-forge</span><br><span class="line">conda activate spconv-1.0</span><br><span class="line">conda install cudnn</span><br><span class="line">conda install boost</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/traveller59/spconv spconv_8da6f96 --recursive</span><br><span class="line"><span class="built_in">cd</span> spconv_8da6f96</span><br><span class="line">git checkout 8da6f967fb9a054d8870c3515b1b44eca2103634</span><br><span class="line">python setup.py bdist_wheel</span><br></pre></td></tr></table></figure>
+<p>$$<br>\frac{1}{P_{T}^2} = \frac{1}{\frac{1}{A}}<br>$$</p>
+<h2 id="VirtualEnv"><a href="#VirtualEnv" class="headerlink" title="VirtualEnv"></a>VirtualEnv</h2><p>VirtualEnv是一个轻量化的Python环境管理工具，但是安装只能基于系统已有的Python版本，不能进行自动化安装。</p>
+
+      
+    </div>
+
+    
+    
+    
+	
+	
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blog.calria.plus/2021/05/04/%E4%BD%BF%E7%94%A8VSCode%E8%B0%83%E8%AF%95Python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="亓淇">
+      <meta itemprop="description" content="小小眼睛充满大大迷惑">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="亓淇小站">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/04/%E4%BD%BF%E7%94%A8VSCode%E8%B0%83%E8%AF%95Python/" class="post-title-link" itemprop="url">使用VSCode调试Python</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-05-04 17:17:28 / Modified: 23:28:01" itemprop="dateCreated datePublished" datetime="2021-05-04T17:17:28+08:00">2021-05-04</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>首先通过单击<code>Run</code>启动调试程序，然后选择创建配置文件<code>launch.json</code>，配置文件内容示例如下：</p>
+<p>示例如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">    <span class="string">&quot;version&quot;</span>: <span class="string">&quot;0.2.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;configurations&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;name&quot;</span>: <span class="string">&quot;debug train.py&quot;</span>,</span><br><span class="line">            <span class="string">&quot;type&quot;</span>: <span class="string">&quot;python&quot;</span>,</span><br><span class="line">            <span class="string">&quot;request&quot;</span>: <span class="string">&quot;launch&quot;</span>,</span><br><span class="line">            <span class="string">&quot;program&quot;</span>: <span class="string">&quot;$&#123;file&#125;&quot;</span>,</span><br><span class="line">            <span class="string">&quot;console&quot;</span>: <span class="string">&quot;integratedTerminal&quot;</span>,</span><br><span class="line">            <span class="string">&quot;args&quot;</span>: [<span class="string">&quot;--dataset&quot;</span>, <span class="string">&quot;COCO&quot;</span>, <span class="string">&quot;--dataset_root&quot;</span>, <span class="string">&quot;D:/Desktop/tiny-datasets/coco2014/small_coco&quot;</span>, <span class="string">&quot;--image_set&quot;</span>, <span class="string">&quot;train_2017_small&quot;</span>, <span class="string">&quot;--batch_size&quot;</span>, <span class="string">&quot;2&quot;</span>, <span class="string">&quot;--cuda&quot;</span>, <span class="string">&quot;False&quot;</span>]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+	
+	
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://blog.calria.plus/2021/04/30/SSD%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -577,7 +713,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-05-02 23:59:45" itemprop="dateModified" datetime="2021-05-02T23:59:45+08:00">2021-05-02</time>
+                <time title="Modified: 2021-05-26 22:23:28" itemprop="dateModified" datetime="2021-05-26T22:23:28+08:00">2021-05-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1197,10 +1333,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-01-14 13:24:00 / Modified: 15:47:30" itemprop="dateCreated datePublished" datetime="2021-01-14T13:24:00+08:00">2021-01-14</time>
+              <time title="Created: 2021-01-14 13:24:00" itemprop="dateCreated datePublished" datetime="2021-01-14T13:24:00+08:00">2021-01-14</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-05-26 22:30:14" itemprop="dateModified" datetime="2021-05-26T22:30:14+08:00">2021-05-26</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -1599,180 +1741,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://blog.calria.plus/2021/01/08/Docker%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9A%E4%BD%BF%E7%94%A8Dockerfile%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="亓淇">
-      <meta itemprop="description" content="小小眼睛充满大大迷惑">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="亓淇小站">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/08/Docker%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9A%E4%BD%BF%E7%94%A8Dockerfile%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F/" class="post-title-link" itemprop="url">Docker详解（二）：使用Dockerfile构建镜像</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-01-08 14:48:22" itemprop="dateCreated datePublished" datetime="2021-01-08T14:48:22+08:00">2021-01-08</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-01-14 01:04:43" itemprop="dateModified" datetime="2021-01-14T01:04:43+08:00">2021-01-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/Docker/" itemprop="url" rel="index"><span itemprop="name">Docker</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>本文对使用Dockerfile进行镜像构建进行了详解。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/01/08/Docker%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9A%E4%BD%BF%E7%94%A8Dockerfile%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-	
-	
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://blog.calria.plus/2021/01/08/Docker%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9ADocker-Network/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="亓淇">
-      <meta itemprop="description" content="小小眼睛充满大大迷惑">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="亓淇小站">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/08/Docker%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9ADocker-Network/" class="post-title-link" itemprop="url">Docker详解（三）：Docker-Network</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-01-08 12:46:54" itemprop="dateCreated datePublished" datetime="2021-01-08T12:46:54+08:00">2021-01-08</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-01-14 01:04:43" itemprop="dateModified" datetime="2021-01-14T01:04:43+08:00">2021-01-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/Docker/" itemprop="url" rel="index"><span itemprop="name">Docker</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>本节内容对Docker中Network的使用进行了详解。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/01/08/Docker%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9ADocker-Network/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-	
-	
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1844,7 +1812,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1857,7 +1825,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-count">28</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

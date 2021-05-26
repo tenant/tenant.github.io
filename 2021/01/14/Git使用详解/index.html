@@ -28,7 +28,7 @@
 <meta property="og:description" content="本文介绍了Git常用的命令。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-01-14T05:24:00.000Z">
-<meta property="article:modified_time" content="2021-01-14T07:47:30.717Z">
+<meta property="article:modified_time" content="2021-05-26T14:30:14.094Z">
 <meta property="article:author" content="亓淇">
 <meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary">
@@ -202,10 +202,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-01-14 13:24:00 / Modified: 15:47:30" itemprop="dateCreated datePublished" datetime="2021-01-14T13:24:00+08:00">2021-01-14</time>
+              <time title="Created: 2021-01-14 13:24:00" itemprop="dateCreated datePublished" datetime="2021-01-14T13:24:00+08:00">2021-01-14</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-05-26 22:30:14" itemprop="dateModified" datetime="2021-05-26T22:30:14+08:00">2021-05-26</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -228,7 +234,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><strong>Transfer codes from <code>GitLab</code> to<code>GitHub</code></strong>:</p>
+        <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><p><strong>Transfer codes from <code>GitLab</code> to<code>GitHub</code></strong>:</p>
 <ul>
 <li><p>create an empty repo on GitHub</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add githubhttps:<span class="comment">//yourLogin@github.com/yourLogin/yourRepoName.git</span></span><br><span class="line">git push --mirror github</span><br></pre></td></tr></table></figure>
@@ -262,10 +268,8 @@
 
 <p><strong>Git diff</strong>:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># show difference between working directory and last commit</span></span><br><span class="line">git diff HEAD</span><br><span class="line"></span><br><span class="line"><span class="comment"># show difference between changes and last commit</span></span><br><span class="line">git diff --cached</span><br></pre></td></tr></table></figure>
-
-
-
-
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="部分仓库下载缓慢-失败问题"><a href="#部分仓库下载缓慢-失败问题" class="headerlink" title="部分仓库下载缓慢/失败问题"></a>部分仓库下载缓慢/失败问题</h3><p>对于不包含submodule的仓库，出现这种问题后，从网页版GitHub中下载源码即可。而对于包含submodule的仓库，一般是主仓库可以下载，但是其submodule下载失败。此时，可以在clone主仓库后，分别clone每个子仓库，再将其放置到父仓库对应的目录下。如对于spconv仓库而言，可以通过如下操作解决问题。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> ... --recursive</span><br><span class="line"><span class="built_in">cd</span> spconv/third_party</span><br><span class="line">git <span class="built_in">clone</span> ... --recursive</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -358,6 +362,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">常用命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E5%88%86%E4%BB%93%E5%BA%93%E4%B8%8B%E8%BD%BD%E7%BC%93%E6%85%A2-%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98"><span class="nav-number">2.1.</span> <span class="nav-text">部分仓库下载缓慢&#x2F;失败问题</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -373,7 +378,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -386,7 +391,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-count">28</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
